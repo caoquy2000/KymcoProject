@@ -1,0 +1,484 @@
+.productdetailwrapper {
+    & .banner {
+        width: 100%;
+        &__img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            &-bg {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 49%;
+                overflow: hidden;
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+                & .item-content {
+                    position: absolute;
+                    width: 68%;
+                    height: 85%;
+                    top: 60%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        object-fit: cover;
+                        display: none;
+                    }
+                    & .active {
+                        display: block;
+                    }
+                }
+            }
+            &-rotate {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & img {
+                    position: relative;
+                    z-index: 2;
+                }
+                &::before {
+                    content: "";
+                    width: 75%;
+                    height: 75%;
+                    background: rgba(244, 53, 44, 0.7);
+                    position: absolute;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: rgba(244, 53, 44, 0.6);
+                    border-radius: 50%;
+                    z-index: 0;
+                }
+            }
+        }
+        @include xxs {
+            &__img {
+                &-bg {
+                    padding-bottom: 70%;
+                    & .item-content {
+                        width: 80%;
+                    }
+                }
+                &-rotate {
+                    width: 50px;
+                    height: 50px;
+                    & img {
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    & .info {
+        & .container {
+        }
+        &__btn {
+            width: 100%;
+            text-align: center;
+            margin: 70px 0px;
+            & a {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                margin: 0px 10px;
+                &.active {
+                    border: 4px solid gray;
+                }
+            }
+            & .--red {
+                background: #6d0012;
+            }
+            & .--black {
+                background: #000;
+            }
+            & .--green {
+                background: #617941;
+            }
+        }
+        &__content {
+            text-align: center;
+            padding: 0px 160px;
+            position: relative;
+            & h3 {
+                font-family: "SE";
+                font-size: 80px;
+                text-transform: uppercase;
+                letter-spacing: 3.2px;
+            }
+            & h4 {
+                letter-spacing: 1.2px;
+                font-size: 30px;
+                font-family: "AvoBold";
+                margin-bottom: 20px;
+            }
+            & p {
+                font-size: 22px;
+                font-family: "Avo";
+                margin-bottom: 20px;
+            }
+            &::after {
+                content: "";
+                width: 68px;
+                height: 3px;
+                background: #000;
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__price {
+            text-align: center;
+            margin: 40px 0px;
+            & h4 {
+                font-family: "SE";
+                font-size: 35px;
+                letter-spacing: 1.2px;
+            }
+            & h3 {
+                font-family: "SE";
+                font-size: 70px;
+                letter-spacing: 2.8px;
+            }
+        }
+        @include md {
+            &__content {
+                padding: initial;
+            }
+        }
+        @include xxs {
+            &__price {
+                & h3 {
+                    font-size: 50px;
+                }
+            }
+        }
+        @include maxW(350px) {
+            &__content {
+                & h3 {
+                    font-size: 60px;
+                }
+                & h4 {
+                    font-size: 25px;
+                }
+                & p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    & .detail {
+        position: relative;
+        height: 760px;
+        margin: 80px 0px;
+
+        &__img {
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &-content {
+                position: relative;
+                overflow: hidden;
+                height: 0;
+                padding-bottom: 79.25%;
+                width: 100%;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+            }
+        }
+        &__info {
+            margin-left: 50%;
+            padding: 10px 30px;
+            &-title {
+                & h3 {
+                    font-family: "SE";
+                    font-size: 60px;
+                    text-transform: uppercase;
+                    letter-spacing: 2.4px;
+                }
+            }
+            &-tags {
+                & .tag__item {
+                    &-title {
+                        cursor: pointer;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        padding: 25px 0px;
+                        & h4 {
+                            font-family: "SE";
+                            font-size: 35px;
+                            text-transform: uppercase;
+                            letter-spacing: 1.4px;
+                            white-space: nowrap;
+                            margin-right: 25px;
+                        }
+                        & .line {
+                            width: 100%;
+                            height: 2px;
+                            background: #000;
+                            margin-right: 25px;
+                            margin-top: 36px;
+                        }
+                        & .view {
+                            position: relative;
+                            width: 20px;
+                            height: 20px;
+                            margin-top: 26px;
+                            flex-shrink: 0;
+                            &::before,
+                            &::after {
+                                content: "";
+                                width: 100%;
+                                height: 6px;
+                                background: #000;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                transition: 0.4s;
+                            }
+
+                            &::after {
+                                transform: translateY(-50%) rotate(90deg);
+                                transition: 0.4s;
+                            }
+                        }
+                        &.active {
+                            & .view {
+                                &::after {
+                                    transform: translateY(-50%) rotate(0deg);
+                                    transition: 0.4s;
+                                }
+                            }
+                        }
+                    }
+                    &-content {
+                        display: none;
+
+                        & .txt {
+                            font-family: "Avo";
+                            font-size: 18px;
+                            & p {
+                                padding-bottom: 10px;
+                            }
+                        }
+                        & .atrribute {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-bottom: 10px;
+                            & .right {
+                                text-align: right;
+                                & p {
+                                    padding: 3px 0px;
+                                }
+                            }
+                            & p {
+                                font-family: "Avo";
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include maxW(1500px) {
+            height: 600px;
+        }
+        @include md {
+            height: auto;
+        }
+        @include sm {
+            &__img {
+                position: initial;
+                top: initial;
+                left: initial;
+                width: 100%;
+            }
+            &__info {
+                margin: initial;
+                padding: initial;
+                &-title {
+                    & h3 {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        @include xs {
+        }
+        @include xxs {
+            &__info {
+                &-title {
+                    & h3 {
+                        font-size: 38px;
+                    }
+                }
+                &-tags {
+                    & .tag__item {
+                        &-title {
+                            & h4 {
+                                font-size: 20px;
+                            }
+                        }
+                        & .line {
+                            margin-top: 20px;
+                        }
+                        & .view {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .feature {
+        margin: 75px 0px;
+        &__spotlight {
+            font-family: "SE";
+            font-size: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+        }
+        @include xs {
+            &__spotlight {
+                & h3 {
+                    font-size: 42px;
+                }
+            }
+        }
+    }
+    & .mission {
+        & .container {
+        }
+        &__content {
+            & .number {
+                &__current {
+                    font-family: "DDB";
+                    font-size: 74px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+                &__devide {
+                    font-family: "DDB";
+                    font-size: 74px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+                &__total {
+                    font-family: "DDB";
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: #b3b3b3;
+                }
+            }
+            & .textbox {
+                & h3 {
+                    font-family: "SE";
+                    font-size: 35px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.4px;
+                }
+                & p {
+                    font-family: "Avo";
+                    font-size: 22px;
+                }
+            }
+        }
+        @include sm {
+            & .container {
+                & .mission__content {
+                    height: 300px;
+                }
+            }
+        }
+        @include xs {
+            & .container {
+                & .mission__content {
+                    height: 320px;
+                }
+                & .mission__slide {
+                    margin-top: 90px;
+                }
+            }
+        }
+        @include xxs {
+        }
+    }
+    & .choose {
+        margin-top: 120px;
+        background: url(../img/hp-banner-choose.jpg) no-repeat center;
+        background-size: cover;
+        height: 650px;
+        & .container {
+            & .textbox {
+                & h3:nth-child(2) {
+                    margin-top: -10px;
+                }
+            }
+            & .choose__button {
+                margin-top: 45px;
+                & a {
+                    text-decoration: none;
+                    padding: 20px 35px;
+                    border-radius: 40px;
+                    font-size: 25px;
+                    font-family: "SE";
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        @include xs {
+            & .container {
+                & .textbox {
+                    & h3 {
+                        font-size: 42px;
+                    }
+                }
+            }
+        }
+        @include maxW(375px) {
+            & .container {
+                & .choose__button {
+                    & a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

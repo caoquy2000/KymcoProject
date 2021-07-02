@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>News</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+</head>
+<style>
+    @font-face {
+        font-family: 'Avo';
+        src: url('fonts/UTMAvo.woff2') format('woff2'),
+            url('fonts/UTMAvo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'AvoBold';
+        src: url('fonts/UTMAvoBold.woff2') format('woff2'),
+            url('fonts/UTMAvoBold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'SE';
+        src: url('fonts/SFUDINEngAlt.woff2') format('woff2'),
+            url('fonts/SFUDINEngAlt.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'SL';
+        src: url('fonts/SFUDINLight.woff2') format('woff2'),
+            url('fonts/SFUDINLight.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D900';
+        src: url('fonts/fonts/DIN-BlackAlternate.woff2') format('woff2'),
+            url('fonts/DIN-BlackAlternate.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'DB';
+        src: url('fonts/DIN-Bold.woff2') format('woff2'),
+            url('fonts/DIN-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D300';
+        src: url('fonts/DIN-Light.woff2') format('woff2'),
+            url('fonts/DIN-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D500';
+        src: url('fonts/DIN-Medium.woff2') format('woff2'),
+            url('fonts/DIN-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D';
+        src: url('fonts/DIN-Regular.woff2') format('woff2'),
+            url('fonts/DIN-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'DDC';
+        src: url('fonts/D-DINCondensed.woff2') format('woff2'),
+            url('fonts/D-DINCondensed.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DDB';
+        src: url('fonts/D-DINCondensed-Bold.woff2') format('woff2'),
+            url('fonts/D-DINCondensed-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header__menu">
+                <ul>
+                    <li class="header__menu-item"><a href="products.html">Sản phẩm</a></li>
+                    <li class="header__menu-item"><a href="#">Công nghệ</a></li>
+                    <li class="header__menu-item"><a href="#">Dịch vụ</a></li>
+                    <li class="header__menu-item"><a href="#">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="header__control">
+                <div class="header__control-search">
+                    <img src="img/search.svg" alt="">
+                </div>
+                <div class="header__control-btn">
+                    <a href="#" class="btn">Đại lý</a>
+                    <a href="#" class="btn">Đăng ký khách hàng</a>
+                </div>
+                <div class="btnMenu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="headerMobile">
+        <div class="headerMobile__menu">
+            <ul>
+                <li class="header__menu-item">
+                    <a href="products.html">Sản phẩm</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Công nghệ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Dịch vụ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Tin tức</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="overlay">
+    </section>
+    <main class="newswrapper">
+        <!-- news banner -->
+        <section class="banner">
+            <div class="banner__wrapper">
+                <img src="img/news-banner.jpg" alt="">
+            </div>
+            <div class="banner__text">
+                <h3>Tin tức</h3>
+                <p>Tổng hợp tin tức mới nhất từ KYMCO Việt Nam & quốc tế</p>
+            </div>
+        </section>
+
+        <!-- section -->
+        <section class="news">
+            <div class="container">
+                <div class="news__wrapper">
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Discover your dream bike</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Extend your 2-years limited warranty</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>New game for your bike this year</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Discover your dream bike</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="#">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Extend your 2-years limited warranty</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>New game for your bike this year</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Discover your dream bike</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>Extend your 2-years limited warranty</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="news__wrapper-item">
+                        <a href="news-detail.html">
+                            <div class="news__img">
+                                <img src="img/hp-new-01.jpg" alt="">
+                            </div>
+                            <div class="news__content">
+                                <h3>New game for your bike this year</h3>
+                                <p>Roll into Milwaukee labor Day Weekend 2018 and join thecel-ebration. No matter
+                                    what...
+                                </p>
+                            </div>
+                            <div class="news__detail">
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="news__paging">
+                    <button class="news__paging-btn prv">Về trước</button>
+                    <a href="#" class="news__paging-page">1</a>
+                    <a href="#" class="news__paging-page active">2</a>
+                    <a href="#" class="news__paging-page">3</a>
+                    <button class="news__paging-btn next">Tiếp theo</button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__title">
+                <a href="#">KYMCO VIETNAM</a>
+            </div>
+            <div class="footer__sociameida">
+                <i><img src="img/facebook.svg" alt=""></i>
+                <i><img src="img/youtube.svg" alt=""></i>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li class="footer__menu-item">
+                        <a href="#">Về kymco</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Tuyển dụng</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Liên hệ</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Kymco network</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+                <p>KWANG YANG VIỆT NAM @ 2018, All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+</body>
+
+</html>

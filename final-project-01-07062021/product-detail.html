@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Product Detail</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+</head>
+<style>
+    @font-face {
+        font-family: 'Avo';
+        src: url('fonts/UTMAvo.woff2') format('woff2'),
+            url('fonts/UTMAvo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'AvoBold';
+        src: url('fonts/UTMAvoBold.woff2') format('woff2'),
+            url('fonts/UTMAvoBold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'SE';
+        src: url('fonts/SFUDINEngAlt.woff2') format('woff2'),
+            url('fonts/SFUDINEngAlt.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'SL';
+        src: url('fonts/SFUDINLight.woff2') format('woff2'),
+            url('fonts/SFUDINLight.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D900';
+        src: url('fonts/fonts/DIN-BlackAlternate.woff2') format('woff2'),
+            url('fonts/DIN-BlackAlternate.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'DB';
+        src: url('fonts/DIN-Bold.woff2') format('woff2'),
+            url('fonts/DIN-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D300';
+        src: url('fonts/DIN-Light.woff2') format('woff2'),
+            url('fonts/DIN-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D500';
+        src: url('fonts/DIN-Medium.woff2') format('woff2'),
+            url('fonts/DIN-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'D';
+        src: url('fonts/DIN-Regular.woff2') format('woff2'),
+            url('fonts/DIN-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'DDC';
+        src: url('fonts/D-DINCondensed.woff2') format('woff2'),
+            url('fonts/D-DINCondensed.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DDB';
+        src: url('fonts/D-DINCondensed-Bold.woff2') format('woff2'),
+            url('fonts/D-DINCondensed-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header__menu">
+                <ul>
+                    <li class="header__menu-item"><a href="products.html">Sản phẩm</a></li>
+                    <li class="header__menu-item"><a href="#">Công nghệ</a></li>
+                    <li class="header__menu-item"><a href="#">Dịch vụ</a></li>
+                    <li class="header__menu-item"><a href="#">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="header__control">
+                <div class="header__control-search">
+                    <img src="img/search.svg" alt="">
+                </div>
+                <div class="header__control-btn">
+                    <a href="#" class="btn">Đại lý</a>
+                    <a href="#" class="btn">Đăng ký khách hàng</a>
+                </div>
+                <div class="btnMenu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="headerMobile">
+        <div class="headerMobile__menu">
+            <ul>
+                <li class="header__menu-item">
+                    <a href="products.html">Sản phẩm</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Công nghệ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Dịch vụ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#">Tin tức</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="overlay">
+    </section>
+    <main class="productdetailwrapper">
+        <!-- banner -->
+        <section class="banner">
+            <div class="banner__img">
+                <div class="banner__img-bg">
+                    <img src="img/bannersanpham.jpg" alt="">
+                    <div class="item-content">
+                        <img class="sp-01 active" src="img/pd-detail-banner.png" alt="">
+                        <img class="sp-02" src="img/dennhamngang.png" alt="">
+                        <img class="sp-03" src="img/xanhngang_1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="banner__img-rotate">
+                    <img src="img/icon-360.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- info -->
+        <section class="info">
+            <div class="container">
+                <div class="info__btn">
+                    <a href="#" class="btn-01 --red active"></a>
+                    <a href="#" class="btn-02 --green"></a>
+                    <a href="#" class="btn-03 --black"></a>
+                </div>
+                <div class="info__content">
+                    <h3>K-PIPE 125</h3>
+                    <h4>Phong cách thể thao Chiến binh mạnh mẽ</h4>
+                    <p>Được thiết kế với kiểu dáng độc đáo, mang nét thể thao và đầy nam tính, K-Pipe 125 ra mắt bộ sưu
+                        tập màu mới: Trắng, Đỏ và Đen.</p>
+                    <p>Là sự kết hợp đặc biệt phá vỡ mọi ranh giới, vừa đậm chất thể thao, đưa đến cho bạn những hành
+                        trình vui vẻ và
+                        tự do mà bạn chưa có cơ hội trải nghiệm trước đây.
+                    </p>
+                </div>
+                <div class="info__price">
+                    <h4>Giá bán lẻ đề xuất:</h4>
+                    <h3>79.900.000VND</h3>
+                </div>
+            </div>
+        </section>
+        <!-- product detail -->
+        <section class="detail">
+            <div class="container">
+                <div class="detail__img">
+                    <div class="detail__img-content">
+                        <img src="img/detailpd-k-pipe125.png.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="detail__info">
+                    <div class="detail__info-title">
+                        <h3>Thông số kĩ thuật</h3>
+                    </div>
+                    <div class="detail__info-tags">
+                        <div class="tag__item">
+                            <div class="tag__item-title">
+                                <h4>Động cơ</h4>
+                                <div class="line">
+
+                                </div>
+                                <div class="view">
+
+                                </div>
+                            </div>
+                            <div class="tag__item-content">
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Dung tích xi lanh</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>49.5 cm3</p>
+                                    </div>
+                                </div>
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Nhiên liệu</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>Xăng</p>
+
+                                    </div>
+                                </div>
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Công suất cực đại</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>1.8/7500(kw/vòng/phút)</p>
+
+                                    </div>
+                                </div>
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Momen xoắn cực đại</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>2.8/5500(Nm/vòng/phút)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tag__item">
+                            <div class="tag__item-title">
+                                <h4>Khung sườn</h4>
+                                <div class="line">
+
+                                </div>
+                                <div class="view">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="tag__item-content">
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Hệ thống phanh</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>Phanh trước: dĩa</p>
+                                        <p>Phanh sau: tang trống</p>
+                                    </div>
+                                </div>
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Lốp xe</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>Lốp trước: Không săm 80/80-17</p>
+                                        <p>Lốp sau: Không săm 90/80-17</p>
+                                    </div>
+                                </div>
+                                <div class="atrribute">
+                                    <div class="left">
+                                        <p>Hệ thống treo</p>
+                                    </div>
+                                    <div class="right">
+                                        <p>Lò xo - Ống trượt</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tag__item">
+                            <div class="tag__item-title">
+                                <h4>Mức tiêu thụ nhiên liệu</h4>
+                                <div class="line">
+
+                                </div>
+                                <div class="view">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="tag__item-content">
+                                <div class="txt">
+                                    <p>Được thử nghiệm bởi Trung tâm thử nghiệm khí thải phương tiện giao thông cơ
+                                        giới đường bộ (NETC) theo quy chuẩn QCVN 04:2009/BGTVT và được kiểm tra, phê
+                                        duyệt của phòng chất lượng xe cơ giới (VAQ)- Cục Đăng kiểm Việt Nam.
+                                    </p>
+                                    <p>Mức nhiên liệu thực tế có thể thay đổi do điều kiện sử dụng, kỹ năng lái xe
+                                        và tình trạng bảo dưỡng kỹ thuật của xe.
+                                    </p>
+                                </div>
+                                <div class="atrribute">
+
+                                    <div class="left">
+                                        <p>Mức tiêu thụ nhiên liệu (L/100km) </p>
+                                    </div>
+                                    <div class="right">
+                                        <p>1.62</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature -->
+        <section class="feature">
+            <div class="container">
+                <div class="feature__spotlight">
+                    <h3>Các tính năng nổi bật</h3>
+                </div>
+            </div>
+        </section>
+        <!-- detail -->
+        <section class="mission">
+            <div class="container">
+                <div class="mission__content">
+                    <div class="number">
+                        <span class="number__current">01</span>
+                        <span class="number__devide">/</span>
+                        <span class="number__total">10</span>
+                    </div>
+                    <div class="textbox t-0 active">
+                        <div class="line"></div>
+                        <h3>Giới thiệu sản phẩm</h3>
+                        <p></p>
+                    </div>
+                    <div class="textbox t-1">
+                        <div class="line"></div>
+                        <h3>KIỂU DÁNG XE</h3>
+                        <p>
+                            Kiểu dáng, phong cách thể thao là yếu tố xuyên suốt trong thiết kế tổng thể xe
+                            cũng như từng chi tiết: Khung sườn xe để lộ khoe cơ bắp cuồn cuộn của một con
+                            báo khỏe mạnh trong tư thế săn mồi, tem xe thiết kế góc cạnh bằng các đường dứt
+                            khoát
+                        </p>
+                    </div>
+                    <div class="textbox t-2">
+                        <div class="line"></div>
+                        <h3>KHUNG SƯỜN MẠNH MẼ</h3>
+                        <p>
+                            K-PIPE 50 nổi bật với bộ khung sườn mắt cáo dạng ống kéo dài tạo cảm giác nối liền với phần
+                            gắp sau, mang đến phong cách thể thao đầy trẻ trung và năng động
+                        </p>
+                    </div>
+                    <div class="textbox t-3">
+                        <div class="line"></div>
+                        <h3>ĐÈN ĐÔI THỂ THAO</h3>
+                        <p>
+
+                            Gây ấn tượng mạnh mẽ cá tính với cụm đèn pha kép cỡ lớn được bao bọc bởi đường viền nhựa.
+                            Mỗi tầng đèn sử dụng bóng Halogen riêng biệt cho các chế độ Pha - Cos
+                        </p>
+                    </div>
+                    <div class="textbox t-4">
+                        <div class="line"></div>
+                        <h3>MẶT ĐỒNG HỒ LCD</h3>
+                        <p>
+
+                            K-PIPE 50cc được trang bị đồng hồ với màn hình LCD cỡ nhỏ hiển thị đầy đủ thông tin như đèn
+                            báo, thông số nhiên liêu, tốc độ, vòng tua máy... với kiểu dáng trẻ trung, cá tính. Chìa
+                            khoá điện thiết kế ngay sát đồng hồ
+                        </p>
+                    </div>
+                </div>
+                <div class="mission__slide">
+                    <div class="mission__slide-img">
+                        <div class="ms__slide-item ms-1">
+                            <img src="img/detailpd-01.jpg" alt="">
+                        </div>
+                        <div class="ms__slide-item ms-2">
+                            <img src="img/detailpd-02.jpg" alt="">
+                        </div>
+                        <div class="ms__slide-item ms-3">
+                            <img src="img/detailpd-03.jpg" alt="">
+                        </div>
+                        <div class="ms__slide-item ms-4">
+                            <img src="img/detailpd-04.jpg" alt="">
+                        </div>
+                        <div class="ms__slide-item ms-5">
+                            <img src="img/detailpd-05.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mission__slide-ctl">
+                    <div class="btn-ctl prev"><i><img src="img/right-arrow.svg" alt=""></i></div>
+                    <div class="devide"></div>
+                    <div class="btn-ctl next"><i><img src="img/right-arrow.svg" alt=""></i></div>
+
+                </div>
+            </div>
+        </section>
+        <!-- banner product -->
+        <section class="choose pd">
+            <div class="container">
+                <div class="textbox">
+                    <h3>Chọn Xe</h3>
+                    <h3>Theo cá tính</h3>
+                    <p>Xe bên bạn mang đậm chất riêng</p>
+                </div>
+                <div class="choose__button">
+                    <a href="#" class="btn">Chọn xe dành riêng cho bạn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__title">
+                <a href="#">KYMCO VIETNAM</a>
+            </div>
+            <div class="footer__sociameida">
+                <i><img src="img/facebook.svg" alt=""></i>
+                <i><img src="img/youtube.svg" alt=""></i>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li class="footer__menu-item">
+                        <a href="#">Về kymco</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Tuyển dụng</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Liên hệ</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#">Kymco network</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+                <p>KWANG YANG VIỆT NAM @ 2018, All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+// css components
+.textbox {
+    & h3 {
+        font-family: "SE";
+        font-size: 60px;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        color: $text-black-cl;
+    }
+    & p {
+        font-family: "Avo";
+        font-size: 22px;
+        line-height: auto;
+        letter-spacing: 0.88px;
+        color: #202020;
+    }
+    @include sm {
+        & h3 {
+            font-size: 48px;
+        }
+    }
+    @include xxs {
+        & h3 {
+            font-size: 24px;
+        }
+        & p {
+            font-size: 12px;
+        }
+    }
+}
+.news__wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    &-item {
+        border: 1px solid #d8d8d8;
+        overflow: hidden;
+        &:hover {
+            & .news__img {
+                & img {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transition: 0.4s;
+                }
+            }
+        }
+        & a {
+            color: #000;
+            text-decoration: none;
+        }
+        & .news__img {
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 91.25%;
+            position: relative;
+            & img {
+                min-width: 100%;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: 0.4s;
+            }
+        }
+        & .news__content {
+            text-align: center;
+            padding: 20px;
+            padding-bottom: initial;
+            & h3 {
+                font-size: 35px;
+                font-family: "DDB";
+                text-transform: uppercase;
+                letter-spacing: 1.4px;
+                display: -webkit-inline-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            & p {
+                font-family: "Avo";
+                font-size: 16px;
+                color: #000;
+                letter-spacing: 0.64px;
+            }
+        }
+        & .news__detail {
+            margin: 30px 0;
+            text-align: center;
+            & a {
+                color: #000;
+                font-size: 16px;
+                letter-spacing: 0.64px;
+                font-family: "Avo";
+                text-decoration: none;
+                border-bottom: 1px solid #404040;
+            }
+        }
+    }
+    @include sm {
+        &-item {
+            & .news__content {
+                & h3 {
+                    font-size: 26px;
+                }
+                & p {
+                    font-size: 16px;
+                    display: -webkit-inline-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-top: 10px;
+                }
+            }
+            & .news__detail {
+                margin: 20px 0px;
+            }
+        }
+    }
+    @include xs {
+        display: initial;
+        &-item {
+            margin-top: 40px;
+        }
+    }
+}
+.mission {
+    position: relative;
+    --hSection: 460px;
+    width: 100%;
+    height: var(--hSection);
+
+    & .container {
+        & .mission__content {
+            position: relative;
+            width: 575px;
+            height: 250px;
+            & .textbox {
+                position: absolute;
+                width: 575px;
+                height: 250px;
+                z-index: 200;
+
+                & .line {
+                    width: 0;
+                    height: 2px;
+                    background-color: #000;
+                    position: relative;
+                    left: -100%;
+                    margin-bottom: 10px;
+                    transition: all 0.6s;
+                    transition-delay: 0.5s;
+                }
+                &.active {
+                    & .line {
+                        width: 120%;
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all 0.6s;
+                        transition-delay: 0.5s;
+                    }
+                    & h3 {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        transition: all 0.6s;
+                        transition-delay: 0.5s;
+                    }
+                    & p {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        transition: all 0.6s;
+                        transition-delay: 0.7s;
+                        margin-top: 10px;
+                    }
+                }
+                & h3 {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(30px);
+                    transition: all 0.6s;
+                    transition-delay: 0.5s;
+                }
+                & p {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(30px);
+                    transition: all 0.6s;
+                    transition-delay: 0.7s;
+                }
+            }
+        }
+        & .mission__slide {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            &-img {
+                height: 100%;
+                & .flickity-viewport {
+                }
+                & .ms__slide-item {
+                    overflow: hidden;
+                    height: 0;
+                    padding-bottom: 46.75%;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    & img {
+                        width: 100%;
+                        height: 100%;
+
+                        object-fit: cover;
+                        @include mid;
+                    }
+                }
+            }
+        }
+        & .mission__slide-ctl {
+            display: flex;
+            align-items: center;
+            background-color: $main-bg-cl;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 200;
+            & .btn-ctl {
+                background-color: $main-bg-cl;
+                padding: 15px 20px;
+                cursor: pointer;
+                & i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & img {
+                        width: 15px;
+                        height: 27px;
+                    }
+                }
+                &.prev {
+                    transform: rotate(180deg);
+                }
+            }
+            & .devide {
+                width: 1px;
+                height: 35px;
+                background-color: #fff;
+            }
+        }
+    }
+    @include sm {
+        height: auto;
+        position: initial;
+        & .container {
+            display: block;
+            align-items: initial;
+            position: relative;
+            & .mission__slide-ctl {
+                transform: initial;
+                left: initial;
+                right: 15px;
+            }
+            & .mission__content {
+                width: 100%;
+                & .textbox {
+                    position: initial;
+                    width: 100%;
+                    height: 100%;
+                    & .line {
+                        transition: all 1s;
+                        transition-delay: 1s;
+                    }
+                    &.active {
+                        & .line {
+                            transition: all 1s;
+                            transition-delay: 1s;
+                        }
+                    }
+                }
+            }
+            & .mission__slide {
+                position: initial;
+                right: initial;
+                top: initial;
+                transform: initial;
+                width: 100%;
+                height: auto;
+                &-img {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    @include xs {
+        & .container {
+            & .mission__slide {
+                margin-top: 25px;
+                &-ctl {
+                    & .btn-ctl {
+                        padding: 10px 18px;
+                    }
+                }
+            }
+        }
+    }
+    @include xxs {
+        & .container {
+            & .mission__content {
+                height: 100px;
+            }
+        }
+    }
+    @include maxW(375px) {
+        & .container {
+            & .mission__content {
+                height: 130px;
+            }
+        }
+    }
+}
